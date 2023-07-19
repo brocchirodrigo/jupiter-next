@@ -8,5 +8,7 @@
     "QSTASH",
     "tanstack",
     "upstash"
-  ]
+  ],
+  "WillLuke.nextjs.addTypesOnSave": true,
+  "WillLuke.nextjs.hasPrompted": true
 }

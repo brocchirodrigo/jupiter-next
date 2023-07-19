@@ -5,6 +5,17 @@ export default withAuth({
     signIn: '/auth/sign-in',
     error: '/auth/error',
   },
+  callbacks: {
+    authorized: async ({ req, token }) => {
+      if (req.nextUrl.pathname.startsWith('/api/test')) {
+        return true
+      }
+
+      if (token) return true
+
+      return false
+    },
+  },
 })
 
 export const config = {
